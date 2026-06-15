@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use(notesRoutes);
-app.use('/auth', authRoutes);
+app.use(authRoutes);
 
 app.use(errors());
 
