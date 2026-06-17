@@ -9,6 +9,7 @@ import { logger } from './middleware/logger.js';
 import notesRoutes from './routes/notesRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import { errors } from 'celebrate';
+import userRoutes from './routes/userRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT ?? 3000;
@@ -20,6 +21,7 @@ app.use(cors());
 
 app.use(notesRoutes);
 app.use(authRoutes);
+app.use(userRoutes);
 
 app.use(errors());
 
